@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import PokemonEntry from "./PokemonEntry";
-import Pagination from "./Pagination";
-import {PAGINATION} from "../constants";
-import PokeapiStore from "../contexts/PokeapiStore";
+import PokemonEntry from "../PokemonEntry/PokemonEntry";
+import Pagination from "../Pagination/Pagination";
+import {PAGINATION} from "../../constants";
+import PokeapiStore from "../../contexts/PokeapiStore";
 import {Row} from "react-bootstrap";
 
 const PokemonList = () => {
@@ -18,12 +18,11 @@ const PokemonList = () => {
 
     return (
         <div>
-            <Pagination pokemons={filteredList}/>
             <Row noGutters>
                 {
                     filteredList.length?
                     filteredList.slice(context.pagination, end).map(pokemon => <PokemonEntry key={pokemon} name={pokemon} />):
-                    <h1>Nie znaleziono pokemonów spełniających wymagania</h1>
+                    <h1 className="text-center w-100">Nie znaleziono pokemonów spełniających wymagania</h1>
                 }
             </Row>
             <Pagination pokemons={filteredList}/>
