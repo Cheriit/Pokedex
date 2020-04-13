@@ -23,7 +23,7 @@ import NameInput from "../NameInput/NameInput";
             <Col md={9} className="pr-md-3">
                 <NameInput />
             </Col>
-            <Col md={3} className="pt-2 pt-md-0 text-center">
+            <Col md={3} className="pt-2 pt-md-0 text-right">
                 <SiteButton className="w-100" onClick={handleShow}>Types</SiteButton>
             </Col>
         </FormRow>
